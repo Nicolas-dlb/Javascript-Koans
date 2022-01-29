@@ -24,6 +24,9 @@ describe('numbers', () => {
         // When
         const result = findMultiples(max, multiplesOf)
         // Then
+        if (result != expectedResult) {
+          console.log(result)
+        }
         expect(result).toEqual(expectedResult)
       },
     )

@@ -21,6 +21,7 @@ describe('sum', () => {
     // When
     const result = sum(...values)
     // Then
+
     expect(result).toBe(Number(expectedValue))
   })
 })

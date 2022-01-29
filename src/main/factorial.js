@@ -1,5 +1,5 @@
 const factorial = (x) => {
-  throw new Error(`Please FIXME and do something with: ${JSON.stringify({ x })}`)
+  return x === 0 ? 1 : x * factorial(x - 1)
 }
 
 export default factorial

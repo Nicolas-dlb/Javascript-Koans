@@ -26,6 +26,7 @@ describe('each async', () => {
         })
       }
       // When
+
       const promiseFactory = () => eachAsync(list, (value) => addLater(value))
       // Then
       await expect(promiseFactory).toFulfillAfter(1000 + 2000 + 3000)

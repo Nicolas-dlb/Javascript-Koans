@@ -29,6 +29,7 @@ describe('linked list', () => {
         const head = linkedList.getHead()
         let node = head
         const result = []
+        console.log(node.value)
         while (node) {
           result.push(node.value)
           node = node.getNext()

@@ -24,7 +24,9 @@ describe('anagram', () => {
     ])('should return %p given %p and %p', (anagram, s1, s2) => {
       // When
       const result = isAnagram(s1, s2)
-      // Then
+      if (result !== anagram) {
+        console.log(s1, s2)
+      }
       expect(result).toEqual(anagram)
     })
   })

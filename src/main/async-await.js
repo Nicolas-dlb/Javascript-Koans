@@ -1,4 +1,4 @@
-const doAfter1s = (value, error, syncError, log) => {
+const doAfter1s = async (value, error, syncError, log) => {
   if (error && syncError) {
     throw error
   }
@@ -13,10 +13,22 @@ const doAfter1s = (value, error, syncError, log) => {
   })
 }
 
-const doAsync = (value, error, syncError, log) => {
-  throw new Error(
-    `Please FIXME and do something with: ${JSON.stringify({ error, log, syncError, value })}`,
-  )
+const doAsync = (value, err, syncError, log) => {
+  return new Promise(function (resolve, reject) {
+    if (err && syncError) {
+      log(err.message)
+      reject(err)
+    } else {
+      setTimeout(function () {
+        if (err) {
+          log && log(err.message)
+          reject(err)
+        } else {
+          resolve(value)
+        }
+      }, 1000)
+    }
+  })
 }
 
 export { doAsync }

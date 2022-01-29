@@ -1,4 +1,9 @@
-const delay = async (ms, value) =>
-  Promise.reject(new Error(`Please FIXME and do something with: ${JSON.stringify({ ms, value })}`))
+const delay = (ms, value) => {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve(value)
+    }, ms)
+  })
+}
 
 export default delay

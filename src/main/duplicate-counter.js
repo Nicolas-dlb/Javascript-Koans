@@ -1,5 +1,8 @@
 const countDuplicate = (ar) => {
-  throw new Error(`Please FIXME and do something with: ${JSON.stringify({ ar })}`)
+  const num = []
+  const result = []
+  ar.map((x) => (num.includes(x) ? result.push(x) : num.push(x)))
+  return result.length
 }
 
 export { countDuplicate }

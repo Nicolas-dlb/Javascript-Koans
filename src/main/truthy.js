@@ -1,9 +1,9 @@
 const getAllTruthies = () => {
-  throw new Error('Please FIXME')
+  return ['a', 1, true, -1, [], {}, new Date()]
 }
 
 const getAllFalsies = () => {
-  throw new Error('Please FIXME')
+  return ['', 0, NaN, false, null, undefined]
 }
 
 export { getAllFalsies, getAllTruthies }

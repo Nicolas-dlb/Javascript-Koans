@@ -1,5 +1,7 @@
-const counterFactory = () => {
-  throw new Error('Please FIXME!')
+export default function counterFactory() {
+  let result = 0
+  return () => {
+    result += 1
+    return result
+  }
 }
-
-export default counterFactory
